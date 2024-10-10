@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import './HomeNavbar.css';
 
-export default function (props) {
+const HomeNavbar =  function (props) {
 
     const navigate = useNavigate();
 
@@ -51,7 +51,7 @@ export default function (props) {
 
                 <div className='rightNavCont'>
                     <ul className='navUl'>
-                        <li className='searchIconLi li'>
+                        {/* <li className='searchIconLi li'>
                             <span className='navLink' >Online:{props.onlineCount}</span>
                         </li>
                         <li className='homeIconLi li'>
@@ -68,13 +68,13 @@ export default function (props) {
                         </li>
                         <li className='searchIconLi li'>
                             <span className='navLink' onClick={props.handleSearchNavClick} ><img className='searchIcon icon' src={searchIconUrl} alt="searchIcon" /></span>
-                        </li>
+                        </li> */}
                         <li className='logoutIconLi li'>
                             {auth ? <span className='navLink'  ><img className='searchIcon icon' onClick={handleLogoutNavClick} src={logoutIconUrl} alt="logoutIcon" /></span> : <span className='navLink'  ><img className='searchIcon icon' onClick={handleLoginNavClick} src={loginIconUrl} alt="logoinIcon" /></span>}
                         </li>
                     </ul>
                     <select className='navSelect' onChange={handleSelectChange}>
-                        <option className='navSelectOption' value="home">
+                        {/* <option className='navSelectOption' value="home">
                             Home
                         </option>
                         <option className='navSelectOption' value="profile">
@@ -88,7 +88,7 @@ export default function (props) {
                         </option>
                         <option className='navSelectOption' value="search">
                             Search
-                        </option>
+                        </option> */}
                         {
                             auth ? <option className='navSelectOption' value="logout">Logout</option>
                                 : <option className='navSelectOption' value="login">Login</option>
@@ -103,3 +103,5 @@ export default function (props) {
         </>
     );
 }
+
+export default HomeNavbar

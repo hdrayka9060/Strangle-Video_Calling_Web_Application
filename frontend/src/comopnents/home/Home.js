@@ -6,7 +6,7 @@ import ProfileUpdate from './ProfileUpdate';
 import ProfilePage from './ProfilePage';
 import useWebSocket from "react-use-websocket";
 
-export default (props)=>{
+const Home = (props)=>{
 
     const videoIconUrl = 'https://cdn-icons-png.flaticon.com/512/4049/4049965.png';
     const audioIconUrl = 'https://cdn-icons-png.flaticon.com/512/3178/3178167.png';
@@ -72,11 +72,11 @@ export default (props)=>{
                 <div className="chatSectionFlex">
                     <div className='row1 row'>
                         <ChatCard title="Video" iconUrl={videoIconUrl} hostUrl={videoUrl} />
-                        <ChatCard title="Near by" iconUrl={nearByIconUrl} hostUrl={nearbyUrl} />
+                        {/* <ChatCard title="Near by" iconUrl={nearByIconUrl} hostUrl={nearbyUrl} /> */}
                     </div>
                     <div className='row2 row'>
-                        <ChatCard title="Audio" iconUrl={audioIconUrl} hostUrl={audioUrl} />
-                        <ChatCard title="Text" iconUrl={textIconUrl} hostUrl={textUrl} />
+                        {/* <ChatCard title="Audio" iconUrl={audioIconUrl} hostUrl={audioUrl} /> */}
+                        {/* <ChatCard title="Text" iconUrl={textIconUrl} hostUrl={textUrl} /> */}
                     </div>
                 </div>
                 </div>
@@ -103,3 +103,5 @@ export default (props)=>{
         </div>
     );
 };
+
+export default Home
