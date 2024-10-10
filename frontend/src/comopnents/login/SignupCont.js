@@ -8,11 +8,11 @@ export default function (props) {
 
     const navigate = useNavigate();
     useEffect(() => {
-        let auth = localStorage.getItem('user');
-        if (auth) {
+        // let auth = localStorage.getItem('user');
+        // if (auth) {
           navigate('/home');
-          console.log('user found')
-        }
+        //   console.log('user found')
+        // }
       });
 
     const [nickname, setNickname] = useState('');

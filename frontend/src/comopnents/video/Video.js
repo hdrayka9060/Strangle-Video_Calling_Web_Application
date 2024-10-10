@@ -9,9 +9,6 @@ function Video(props) {
 
   const userImgUrl="https://cdn-icons-png.flaticon.com/512/3177/3177440.png";
 
-  let auth=localStorage.getItem("user");
-  auth=JSON.parse(auth);
-
   const [chatChangeBtnNo,setChatChangeBtnNo]=useState(false);
 
   function changeChatBtnClick(){
@@ -28,8 +25,8 @@ function Video(props) {
       <Navbar  />
 
       <div className="chatCont">
-        <ChatBox username={auth.nickname} userImg={userImgUrl} chatChangeBtnNo={chatChangeBtnNo} changeChatBtnClick={changeChatBtnClick}/>
-        <VideoBox username={auth.nickname} userImg={userImgUrl} chatChangeBtnNo={chatChangeBtnNo} />
+        <ChatBox username={'Stranger'} userImg={userImgUrl} chatChangeBtnNo={chatChangeBtnNo} changeChatBtnClick={changeChatBtnClick}/>
+        <VideoBox username={'Stranger'} userImg={userImgUrl} chatChangeBtnNo={chatChangeBtnNo} />
       </div>
 
     </div>

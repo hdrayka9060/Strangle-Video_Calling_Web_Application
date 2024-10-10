@@ -18,7 +18,7 @@ export default function (props) {
       <div className="loginMainCont">
 
         <div className="LoginImg">
-          <LoginImg />
+          {/* <LoginImg /> */}
         </div>
         {
           signin ? <div className="LoginCont" >

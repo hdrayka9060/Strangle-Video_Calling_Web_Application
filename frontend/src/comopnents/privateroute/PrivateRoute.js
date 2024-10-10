@@ -3,6 +3,6 @@ import {Outlet,Navigate} from 'react-router-dom';
 
 function PrivateRoute(){
     let auth=localStorage.getItem('user');
-    return auth?<Outlet /> : <Navigate to='/' />;
+    return auth?<Outlet /> : <Outlet />;
 }
 export default PrivateRoute;
